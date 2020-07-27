@@ -1,0 +1,313 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12645,        305]
+NotebookOptionsPosition[     11934,        284]
+NotebookOutlinePosition[     12336,        300]
+CellTagsIndexPosition[     12293,        297]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Quiet", "[", 
+     RowBox[{"ParametricPlot3D", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"v", "*", 
+          RowBox[{"Cos", "[", "u", "]"}]}], ",", " ", 
+         RowBox[{"v", "*", 
+          RowBox[{"Sin", "[", "u", "]"}]}], ",", " ", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{"Pi", "*", 
+            RowBox[{"(", 
+             RowBox[{"t", "/", "10"}], ")"}]}], "]"}], "*", 
+          RowBox[{"BesselJ", "[", 
+           RowBox[{"j", ",", " ", "v"}], "]"}]}]}], "}"}], ",", " ", "\n", 
+       "    ", 
+       RowBox[{"{", 
+        RowBox[{"u", ",", " ", "0", ",", " ", 
+         RowBox[{"4", "*", 
+          RowBox[{"(", 
+           RowBox[{"Pi", "/", "2"}], ")"}]}]}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"v", ",", " ", "0", ",", " ", "10"}], "}"}], ",", " ", 
+       RowBox[{"Boxed", " ", "->", " ", "False"}], ",", " ", 
+       RowBox[{"Axes", " ", "->", " ", "False"}], ",", " ", "\n", "    ", 
+       RowBox[{"PlotRange", " ", "->", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], "}"}]}], ",", " ", 
+       RowBox[{"BoxRatios", " ", "->", " ", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", " ", "1", ",", " ", "0.3"}], "}"}]}], ",", " ", 
+       "\n", "    ", 
+       RowBox[{"SphericalRegion", " ", "->", " ", "True"}], ",", " ", 
+       RowBox[{"PlotPoints", " ", "->", " ", "25"}], ",", " ", 
+       RowBox[{"ImageSize", " ", "->", " ", 
+        RowBox[{"{", 
+         RowBox[{"465", ",", " ", "350"}], "}"}]}], ",", " ", 
+       RowBox[{"ViewAngle", " ", "->", " ", "0.3"}], ",", " ", "\n", "    ", 
+       RowBox[{"Mesh", " ", "->", " ", "mesh"}]}], "]"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", ",", " ", "0.1", ",", " ", "\"\<time\>\""}], "}"}], ",", 
+      " ", "0.1", ",", " ", "30"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"j", ",", " ", "0", ",", " ", "\"\<nodal diameters\>\""}], 
+       "}"}], ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", "\n", "  ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"mesh", ",", " ", "Automatic", ",", " ", "\"\<show mesh\>\""}],
+        "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"False", ",", " ", "Automatic"}], "}"}], ",", " ", 
+      RowBox[{"ControlType", " ", "->", " ", "Checkbox"}]}], "}"}], ",", " ", 
+    "\n", "  ", 
+    RowBox[{"ControllerLinking", " ", "->", " ", "True"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{
+  3.798585824807128*^9, 3.798585879085198*^9, {3.7985860041177473`*^9, 
+   3.798586026263131*^9}},ExpressionUUID->"8a75cb61-4a27-4585-a78c-\
+d4786838b044"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`j$$ = 0., $CellContext`mesh$$ = 
+    Automatic, $CellContext`t$$ = 0.1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$, Typeset`name$$ = "\"untitled\"", 
+    Typeset`specs$$ = {{{
+       Hold[$CellContext`t$$], 0.1, "time"}, 0.1, 30}, {{
+       Hold[$CellContext`j$$], 0, "nodal diameters"}, 0, 5}, {{
+       Hold[$CellContext`mesh$$], Automatic, "show mesh"}, {
+      False, Automatic}}}, Typeset`size$$ = {465., {173., 177.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`j$$ = 0, $CellContext`mesh$$ = 
+        Automatic, $CellContext`t$$ = 0.1}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Quiet[
+        ParametricPlot3D[{$CellContext`v Cos[$CellContext`u], $CellContext`v 
+          Sin[$CellContext`u], Cos[Pi ($CellContext`t$$/10)] 
+          BesselJ[$CellContext`j$$, $CellContext`v]}, {$CellContext`u, 0, 
+          4 (Pi/2)}, {$CellContext`v, 0, 10}, Boxed -> False, Axes -> False, 
+         PlotRange -> {{-10, 10}, {-10, 10}, {-1, 1}}, 
+         BoxRatios -> {1, 1, 0.3}, SphericalRegion -> True, PlotPoints -> 25, 
+         ImageSize -> {465, 350}, ViewAngle -> 0.3, 
+         Mesh -> $CellContext`mesh$$]], 
+      "Specifications" :> {{{$CellContext`t$$, 0.1, "time"}, 0.1, 
+         30}, {{$CellContext`j$$, 0, "nodal diameters"}, 0, 
+         5}, {{$CellContext`mesh$$, Automatic, "show mesh"}, {
+         False, Automatic}, ControlType -> Checkbox}}, 
+      "Options" :> {ControllerLinking -> True}, "DefaultOptions" :> {}],
+     ImageSizeCache->{510., {243., 249.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.798585794554517*^9, {3.798585948461832*^9, 3.7985859613555593`*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"be9dc3da-50ae-438c-a6c6-3158652ea946"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "nthzero", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"nthzero", "=", 
+       RowBox[{"N", "[", 
+        RowBox[{"BesselJZero", "[", 
+         RowBox[{"n", ",", "kthroot"}], "]"}], "]"}]}], ";", 
+      RowBox[{"ParametricPlot3D", "[", 
+       RowBox[{
+        RowBox[{"Evaluate", "@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"s", " ", 
+            RowBox[{"Cos", "[", "theta", "]"}]}], ",", 
+           RowBox[{"s", " ", 
+            RowBox[{"Sin", "[", "theta", "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"Cos", "[", "time", "]"}], " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"n", " ", "theta"}], "]"}], " ", 
+            RowBox[{"BesselJ", "[", 
+             RowBox[{"n", ",", 
+              RowBox[{"s", " ", "nthzero"}]}], "]"}]}]}], "}"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"s", ",", "0", ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"theta", ",", "0", ",", 
+          RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", "1"}], ",", 
+        RowBox[{"Mesh", "\[Rule]", "mesh"}], ",", 
+        RowBox[{"Boxed", "\[Rule]", "True"}], ",", 
+        RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+        RowBox[{"SphericalRegion", "\[Rule]", "True"}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"375", ",", "375"}], "}"}]}]}], "]"}]}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"mesh", ",", "False", ",", "\"\<show mesh\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"False", ",", "True"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "Checkbox"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"n", ",", "0", ",", "\"\<order n\>\""}], "}"}], ",", "0", ",", 
+     "5", ",", "1", ",", "RadioButton"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "kthroot", ",", "1", ",", 
+       "\"\<\!\(\*SuperscriptBox[\(k\), \(th\)]\) zero\>\""}], "}"}], ",", 
+     "1", ",", "4", ",", "1", ",", "RadioButton"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"time", ",", "0", ",", "\"\<time\>\""}], "}"}], ",", "0", ",", 
+     " ", 
+     RowBox[{"2", " ", "Pi"}]}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellLabel->"In[6]:=",ExpressionUUID->"d62dbb5d-8099-4e8f-b991-9f820e9e1c7f"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`kthroot$$ = 1, $CellContext`mesh$$ = 
+    False, $CellContext`n$$ = 0, $CellContext`time$$ = 0, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`mesh$$], False, "show mesh"}, {False, True}}, {{
+       Hold[$CellContext`n$$], 0, "order n"}, 0, 5, 1}, {{
+       Hold[$CellContext`kthroot$$], 1, 
+       "\!\(\*SuperscriptBox[\(k\), \(th\)]\) zero"}, 1, 4, 1}, {{
+       Hold[$CellContext`time$$], 0, "time"}, 0, 2 Pi}}, Typeset`size$$ = {
+    375., {185., 190.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`kthroot$$ = 1, $CellContext`mesh$$ = 
+        False, $CellContext`n$$ = 0, $CellContext`time$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`nthzero$}, $CellContext`nthzero$ = N[
+           BesselJZero[$CellContext`n$$, $CellContext`kthroot$$]]; 
+        ParametricPlot3D[
+          
+          Evaluate[{$CellContext`s Cos[$CellContext`theta], $CellContext`s 
+            Sin[$CellContext`theta], Cos[$CellContext`time$$] 
+            Cos[$CellContext`n$$ $CellContext`theta] 
+            BesselJ[$CellContext`n$$, $CellContext`s \
+$CellContext`nthzero$]}], {$CellContext`s, 0, 1}, {$CellContext`theta, 0, 2 
+           Pi}, PlotRange -> 1, Mesh -> $CellContext`mesh$$, Boxed -> True, 
+          Axes -> False, SphericalRegion -> True, ImageSize -> {375, 375}]], 
+      "Specifications" :> {{{$CellContext`mesh$$, False, "show mesh"}, {
+         False, True}, ControlType -> 
+         Checkbox}, {{$CellContext`n$$, 0, "order n"}, 0, 5, 1, ControlType -> R\
+adioButton}, {{$CellContext`kthroot$$, 1, 
+          "\!\(\*SuperscriptBox[\(k\), \(th\)]\) zero"}, 1, 4, 1, ControlType -> 
+         RadioButton}, {{$CellContext`time$$, 0, "time"}, 0, 2 Pi}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{420., {265., 271.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.798585962126333*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"e4b717b1-348c-4e1e-a13a-942cc94dcfaf"]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{236, Automatic}, {Automatic, 50}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+StyleDefinitions->"ReverseColor.nb",
+ExpressionUUID->"a8c60a2d-df91-4010-ac16-0656e5188610"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3085, 77, 178, "Input",ExpressionUUID->"8a75cb61-4a27-4585-a78c-d4786838b044"],
+Cell[3668, 101, 2611, 49, 511, "Output",ExpressionUUID->"be9dc3da-50ae-438c-a6c6-3158652ea946"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6316, 155, 2652, 69, 226, "Input",ExpressionUUID->"d62dbb5d-8099-4e8f-b991-9f820e9e1c7f"],
+Cell[8971, 226, 2947, 55, 555, "Output",ExpressionUUID->"e4b717b1-348c-4e1e-a13a-942cc94dcfaf"]
+}, Open  ]]
+}
+]
+*)
+
